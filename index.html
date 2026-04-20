@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Словарный тренажёр</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Интерактивный тренажёр</p>
+        <h1>Найди слово в тексте по его значению</h1>
+      </div>
+      <div class="progress-wrap">
+        <span id="progressText">1 / 37</span>
+        <div class="progress-bar">
+          <div id="progressBar"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="trainer-card">
+      <section id="taskScreen">
+        <div class="task-badge" id="taskBadge">Задание 1</div>
+        <h2 id="question" class="question"></h2>
+
+        <div class="text-panel">
+          <p id="textContainer" class="task-text"></p>
+        </div>
+
+        <div class="bottom-actions">
+          <button id="showCardBtn" class="btn btn-secondary" type="button">Далее</button>
+        </div>
+      </section>
+
+      <section id="resultCard" class="result-card hidden" aria-live="polite">
+        <div class="result-card__content">
+          <div class="result-card__text">
+            <p class="card-label">Карточка</p>
+            <h3 id="answerWord"></h3>
+            <p id="answerText"></p>
+          </div>
+          <div id="imageWrap" class="result-card__image hidden">
+            <img id="answerImage" src="" alt="" />
+          </div>
+        </div>
+        <div class="bottom-actions">
+          <button id="nextTaskBtn" class="btn btn-primary" type="button">К следующему заданию</button>
+        </div>
+      </section>
+
+      <section id="finishScreen" class="finish-screen hidden">
+        <div class="finish-icon">★</div>
+        <h2>Тренажёр завершён</h2>
+        <p>Все карточки просмотрены. Можно пройти ещё раз.</p>
+        <p>Больше полезных материалов для уроков можно найти <a href="https://vk.com/margo_uchit" target="_blank"> в моем сообществе ВК. </a> </p>
+        <button id="restartBtn" class="btn btn-primary" type="button">Начать заново</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
